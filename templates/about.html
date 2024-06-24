@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block title %}
+About
+{% endblock title %}
+{% block body %}
+
+<main>
+    <!-- about.html -->
+    <section class="about-profile">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h4>{{about.name}}</h4>
+            <img src="{{image_url}}{{about.image.data.attributes.url}}" alt="about" />
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-6">
+            <div class="about-text">
+              <h1>{{about.title1}}</h1>
+              <h2>{{about.title2}}</h2>
+              <p>
+                {{about.description}}
+              <a href="#0" class="typing-container">
+                <h5 class="loader">{{about.button_txt}}</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- my story -->
+    <section class="container">
+      <div class="row">
+        <div class="col-md-5 about-details">
+          <div class="my-story">
+            <h4><mark>{{about.my_story}}</mark></h4>
+            <p>
+              {{about.my_story_desc}}
+            </p>
+          </div>
+
+          <img src="/static/img/pp.png" alt="about" class="frame-img" />
+        </div>
+        <div class="col-md-4 about-img">
+          <span></span>
+          <img src="{{image_url}}{{about.my_story_1.data.attributes.url}}" alt="about" class="img1" />
+        </div>
+        <div class="col-md-3 about-img">
+          <img src="/static/img/pp.png" alt="about" class="frame-img" />
+          <img src="{{image_url}}{{about.my_story_2.data.attributes.url}}" alt="about" class="img2" />
+        </div>
+      </div>
+    </section>
+
+    <!-- skills -->
+    <section class="skills">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 skills-title">
+            <img src="/static/img/icon-skills.png" alt="" />
+            <h4>
+             {{about.about_skill1}}
+              <br />
+              {{about.about_skill2}}
+            </h4>
+          </div>
+          <div class="col-md-9 skills-list">
+            <ul>
+              <li>
+                {%for item in about.skill %}
+                <h5>{{item.title}}</h5>
+                <p>{{item.description}}</p>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- hobby -->
+    <section class="hobby">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 hobby-title">
+            <h3>{{about.hobby}}</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="hobby-1">
+              <h4>{{about.hobby1_title}}</h4>
+              <p>{{about.hobby1_desc}}</p>
+              <img src="{{image_url}}{{about.hobby1_img.data.attributes.url}}" alt="about" class="hobby-img" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="hobby-2">
+              <h4>{{about.hobby2_title}}</h4>
+              <p>{{about.hobby2_desc}}</p>
+              <img src="{{image_url}}{{about.hobby2_img.data.attributes.url}}" alt="about" class="hobby-img" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="hobby-3">
+              <h4>{{about.hobby3_title}}</h4>
+              <p>{{about.hobby3_desc}}</p>
+              <img src="{{image_url}}{{about.hobby3_img.data.attributes.url}}" alt="about" class="hobby-img" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="hobby-4">
+              <h4>{{about.hobby4_title}}</h4>
+              <p>{{about.hobby4_desc}}</p>
+              <img src="{{image_url}}{{about.hobby4_img.data.attributes.url}}" alt="about" class="hobby-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+    {% endblock body%}
