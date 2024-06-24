@@ -36,7 +36,7 @@ def get_data(path, keys: list=[]):
 
 MENU = get_data('menu' , ['menu', 'logo'])
 FOOTER = get_data('footer')
-SOCIAL = [i.get('attributes', {}).get('icon_class') for i in get_data('socials')]
+SOCIAL = [i.get('attributes', {}) for i in get_data('socials')]
 HOME = get_data('home', ['eduinfo', 'skills', 'image', 'table', 'source', 'blog']) 
 ABOUT = get_data('about', ['image', 'my_story_1', 'my_story_2', 'skill', 'hobby1_img',
                             'hobby2_img', 'hobby3_img', 'hobby4_img']) 
