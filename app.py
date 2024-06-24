@@ -1,5 +1,5 @@
 import os
-from flask import Flask, abort, render_template, request, url_for
+from flask import Flask, abort, render_template, request, send_from_directory, url_for
 import requests
 from dotenv import load_dotenv
 
@@ -62,6 +62,11 @@ def contact():
 @app.route('/portfolio')
 def portfolio():
     return render_template('portfolio.html', menu=MENU, footer=FOOTER, image_url=IMAGE_URL)
+
+# Custom static data
+@app.route('/uploads/<path:filename>')
+def custom_static(filename):
+    return send_from_directory('uploads', filename)
 
 if __name__ == '__main__':
     app.run(debug=True)
