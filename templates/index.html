@@ -98,7 +98,11 @@ Home
     <!-- about-table  -->
     <section class="about-table container">
       <div class="row about-details">
-         
+        <div class="col-md-12 pm-title">
+          <h2 class="title-about">{{home.resource_title}}</h2>
+          <p>{{home.resurce_desc}}</p>
+        </div>
+        
         {% for item in home.table %}
         <div class="col-md-3 {{item.rowclass}}">
         
@@ -133,7 +137,7 @@ Home
             </div>
           </a>
         </div>
-   {% endfor %}
+    {% endfor %}
       </div>
     </section>
 
