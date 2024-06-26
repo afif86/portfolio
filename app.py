@@ -61,7 +61,7 @@ def contact():
 
 @app.route('/portfolio')
 def portfolio():
-    return render_template('portfolio.html', menu=MENU, footer=FOOTER, image_url=IMAGE_URL)
+    return render_template('portfolio.html', menu=MENU, footer=FOOTER,social=SOCIAL, image_url=IMAGE_URL)
 
 # Custom static data
 @app.route('/uploads/<path:filename>')
