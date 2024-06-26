@@ -96,14 +96,11 @@ Home
     </section>
 
     <!-- about-table  -->
-    <section class="about-table">
+    <section class="about-table container">
       <div class="row about-details">
-        <div class="col-md-4 about-img">            
-          <img src="{{home.image.data.attributes.url}}" alt="about" /> 
-        </div>
          
         {% for item in home.table %}
-        <div class="col-md-4 {{item.rowclass}}">
+        <div class="col-md-3 {{item.rowclass}}">
         
           {%for i in item.about %}
           <div class="col-md-12 {{i.tableclass }}">
