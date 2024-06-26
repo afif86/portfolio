@@ -565,45 +565,42 @@ section {
   padding: 0 !important;
 }
 
-.about-details .about-text1 {
+.about-details .about-text {
   padding: 0 !important;
 }
 
-.about-details .about-text2 {
-  padding: 0 !important;
-}
 
-.about-details .about-text1 .clumn-L1 {
+.about-details .about-text .clumn-n1 {
   background-color: #f6d7ff;
   text-align: center;
-  height: 25%;
+  /* height: 25%; */
   vertical-align: middle;
   align-content: center;
   padding: 30px;
 }
 
-.about-details .about-text1 .clumn-L2 {
+.about-details .about-text .clumn-n2 {
   background-color: #d6fcfb;
   text-align: center;
-  height: 25%;
+  /* height: 25%; */
   vertical-align: middle;
   align-content: center;
   padding: 30px;
 }
 
-.about-details .about-text2 .clumn-R1 {
+.about-details .about-text .clumn-n3 {
   background-color: #fff5b7;
   text-align: center;
-  height: 25%;
+  /* height: 25%; */
   vertical-align: middle;
   align-content: center;
   padding: 30px;
 }
 
-.about-details .about-text2 .clumn-R2 {
+.about-details .about-text .clumn-n4 {
   background-color: #56fac980;
   text-align: center;
-  height: 25%;
+  /* height: 25%; */
   vertical-align: middle;
   align-content: center;
   padding: 30px;
