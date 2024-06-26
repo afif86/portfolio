@@ -567,6 +567,7 @@ section {
 
 .about-details .about-text {
   padding: 0 !important;
+  margin: 10px;
 }
 
 
@@ -577,6 +578,7 @@ section {
   vertical-align: middle;
   align-content: center;
   padding: 30px;
+  margin: 10px;
 }
 
 .about-details .about-text .clumn-n2 {
