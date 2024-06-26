@@ -41,7 +41,14 @@
         <div class="col-md-7">
           <ul class="main">
             {% for item in menu.menu %}
-            <li><a href="/{{item.name.lower()}}">{{item.name}}</a></li>
+            <li><a href="
+               {% if item.name.lower() == 'home' %}
+                   /
+              {% else  %}
+             {{item.name.lower()}}
+              {% endif %}
+              ">
+               {{item.name}}</a></li>
             {% endfor %}
           </ul>
         </div>
