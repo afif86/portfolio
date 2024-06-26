@@ -573,6 +573,12 @@ section {
   padding: 10px !important;
 }
 
+.about-details .about-text h3{
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
 
 .about-details .about-text .clumn-n1 {
   background-color: #f6d7ff;
@@ -615,7 +621,8 @@ section {
 }
 
 .about-details .about-text .clumn-n5 {
- border: 1px solid #290034;
+  border: 1px solid #ab8cb3;
+  background-color: #efefef3d;
   margin-bottom: 20px;
   text-align: center;
   vertical-align: middle;
