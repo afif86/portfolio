@@ -582,7 +582,6 @@ section {
   align-content: center;
   padding: 30px;
   height: 300px;
-
 }
 
 .about-details .about-text .clumn-n2 {
@@ -613,7 +612,16 @@ section {
   align-content: center;
   padding: 30px;
   height: 300px;
+}
 
+.about-details .about-text .clumn-n5 {
+ border: 1px solid #290034;
+  margin-bottom: 20px;
+  text-align: center;
+  vertical-align: middle;
+  align-content: center;
+  padding: 30px;
+  height: 300px;
 }
 
 .about-profile img {
