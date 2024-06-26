@@ -577,15 +577,14 @@ section {
   font-size: 28px;
   font-weight: 600;
   line-height: 1.5;
+  text-align: center;
 }
 
 
 .about-details .about-text .clumn-n1 {
   background-color: #f6d7ff;
   margin-bottom: 20px;
-  text-align: center;
-  vertical-align: middle;
-  align-content: center;
+  text-align: right;
   padding: 30px;
   height: 300px;
 }
@@ -593,9 +592,7 @@ section {
 .about-details .about-text .clumn-n2 {
   background-color: #d6fcfb;
   margin-bottom: 20px;
-  text-align: center;
-  vertical-align: middle;
-  align-content: center;
+  text-align: right;
   padding: 30px;
   height: 300px;
 }
@@ -603,9 +600,7 @@ section {
 .about-details .about-text .clumn-n3 {
   background-color: #fff5b7;
   margin-bottom: 20px;
-  text-align: center;
-  vertical-align: middle;
-  align-content: center;
+  text-align: right;
   padding: 30px;
   height: 300px;
 }
@@ -613,22 +608,22 @@ section {
 .about-details .about-text .clumn-n4 {
   background-color: #56fac980;
   margin-bottom: 20px;
-  text-align: center;
-  vertical-align: middle;
-  align-content: center;
+  text-align: right;
   padding: 30px;
   height: 300px;
 }
 
 .about-details .about-text .clumn-n5 {
   border: 1px solid #ab8cb3;
-  background-color: #efefef3d;
   margin-bottom: 20px;
-  text-align: center;
-  vertical-align: middle;
-  align-content: center;
+  text-align: right;
   padding: 30px;
   height: 300px;
+}
+
+.about-details .about-text i {
+  margin-bottom: 20%;
+    color: #780595;
 }
 
 .about-profile img {
