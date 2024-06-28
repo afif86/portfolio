@@ -788,6 +788,15 @@ section {
   padding: 10%;
 }
 
+@media screen and (max-width: 768px)  {
+  .portfolio-cta {
+    height: 500px;
+  }
+}
+
+.portfolio-cta p {
+  margin-bottom: 60px;
+}
 
 .portfolio-btn {
   padding: 10px 30px;
