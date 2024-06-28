@@ -781,6 +781,22 @@ section {
 
 /* resources
     =========================================== */
+.portfolio-cta {
+  background-image: url(/static/img/portfolioo.png);
+  width: 100%;
+  height: 690px;
+  padding: 10%;
+}
+
+
+.portfolio-btn {
+  padding: 10px 30px;
+  background-color: #fff5b7;
+  border: #fff5b7;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
 
 .resources .resources-title {
   margin-bottom: 40px;

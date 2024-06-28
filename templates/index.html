@@ -95,7 +95,7 @@ Home
       </div>
     </section>
 
-    <!-- about-table  -->
+    <!-- resource  -->
     <section class="about-table container">
       <div class="row about-details">
         <div class="col-md-12 pm-title">
@@ -111,38 +111,25 @@ Home
             <a href="#">
             <i class="fa-solid fa-circle-arrow-down"></i>
             </a>
-            <h3>{{i.title | safe}}</h3>
-
-            
+            <h3>{{i.title | safe}}</h3>           
           </div>
           {% endfor %}
+
         </div>
         {% endfor %}
         
       </div>
     </section>
 
-    <!-- resources -->
-    <section class="container">
-      <div class="row resources">
-        <div class="col-md-12 resources-title">
-          <h2 class="title-about">{{home.resource_title}}</h2>
-          <p>{{home.resurce_desc}}</p>
-        </div>
-        {%for item in home.source %}
-        <div class="col-md-4">
-          <a href="#">  
-            <div class="card {{item.resource_class}}">          
-              <div class="card-body">
-                <h4 class="card-title">
-                  {{item.resource_title | safe}}
-                </h4>
-              </div>
-
-            </div>
-          </a>
-        </div>
-    {% endfor %}
+    <!-- portfolio -->
+    <section class="portfolio-cta">
+      <div class="row">
+          <div class="col-md-12 pm-title">
+            <h2 class="title-portfolio">{{home.portfolio_title}}</h2>
+            <p>{{home.portfolio_desc}}</p>
+            <a class="portfolio-btn" href="#">{{home.portfolio_button}}</a>
+          </div>
+      
       </div>
     </section>
 
