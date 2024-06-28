@@ -864,6 +864,24 @@ section {
   align-content: center;
 }
 
+.articles .card-article-text p {
+  margin-top: 20px;
+}
+
+.art-info {
+  display: inline;
+  padding-bottom: 20px;
+}
+
+.art-info h6{
+  display: inline;
+  color: #da52f2;
+}
+
+.art-info .tag {
+  padding-left: 50px;
+}
+
 /* footer
     =========================================== */
 
