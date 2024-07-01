@@ -1,5 +1,5 @@
 import os
-from flask import Flask, abort, render_template, request, send_from_directory, url_for
+from flask import Flask, render_template, send_from_directory
 import requests
 from dotenv import load_dotenv
 
@@ -40,14 +40,19 @@ SOCIAL = [i.get('attributes', {}) for i in get_data('socials')]
 HOME = get_data('home', ['eduinfo', 'skills', 'image', 'table', 'source', 'blog']) 
 ABOUT = get_data('about', ['image', 'my_story_1', 'my_story_2', 'skill', 'hobby1_img',
                             'hobby2_img', 'hobby3_img', 'hobby4_img']) 
+POSTS = get_data('posts', ['image', 'categories'])
 EDUINFO = HOME.get('eduinfo', [])  
 CONTACT = get_data('contact', ['contact_image'])
 PORTFOLIO = get_data('portfolio', [])
 
+
+# TODO: remove blog from home. 
+
 @app.route('/')
 def index():
     return render_template('index.html', menu=MENU, home=HOME, 
-                           social=SOCIAL, image_url=IMAGE_URL, eduinfo=EDUINFO, footer=FOOTER)
+                           social=SOCIAL, image_url=IMAGE_URL, eduinfo=EDUINFO,
+                             footer=FOOTER, posts= POSTS)
 
 @app.route('/about')
 def about():
@@ -61,7 +66,8 @@ def contact():
 
 @app.route('/portfolio')
 def portfolio():
-    return render_template('portfolio.html', menu=MENU, footer=FOOTER,social=SOCIAL, image_url=IMAGE_URL)
+    return render_template('portfolio.html', menu=MENU, footer=FOOTER, 
+                           social=SOCIAL, image_url=IMAGE_URL)
 
 # Custom static data
 @app.route('/uploads/<path:filename>')

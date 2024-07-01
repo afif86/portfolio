@@ -141,30 +141,32 @@ Home
         </div>
         <div class="row article">
            
-          {%for item in home.blog %}
+          {%for item in posts %}
           <div class="col-md-3">
             <div class="card-article">
               <div class="article-img">
-                <a href="{{item.art_url}} target='_blank'">
-                  <img src="{{item.art_img.data.attributes.url}}" alt="article" />
+                <a href="{{item.attributes.url}}" target='_blank'>
+                  <img src="{{item.attributes.image.data.attributes.url}}" alt="article" />
                 </a>
               </div>
             </div>
           </div>
           <div class="col-md-9">
             <div class="card-article-text">
-              <a href="{{item.art_url}} target='_blank'">
+              <a href="{{item.attributes.url}}" target='_blank'>
                 <div class="article-body">
                   <h4 class="article-title">
-                   {{item.art_title}}
+                   {{item.attributes.title}}
                   </h4>
                   <div class="art-info">
-                    <h6>{{item.art_date}}</h6>
-                    <h6 class="tag">tag ux</h6>
+                    <h6>{{item.attributes.date}}</h6>
+                    {%for i in item.attributes.categories.data %}
+                    <h6 class="tag {{i.attributes.class}}">tag ux</h6>
+                  {%endfor%}
                   </div>
                   
                   <p>
-                    {{item.art_desc}}
+                    {{item.attributes.desc}}
                   </p>
                 </div>
               </a>
