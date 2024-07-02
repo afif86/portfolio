@@ -69,7 +69,7 @@ About
             <ul>
               <li>
                 {%for item in about.skill %}
-                <h5>{{item.title}}</h5>
+                <h5>{{item.title | safe}}</h5>
                 <p>{{item.description}}</p>
               </li>
               {% endfor %}
