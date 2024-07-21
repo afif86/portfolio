@@ -11,18 +11,23 @@ load_dotenv()
 URL = os.getenv('URL', default='http://localhost:5000/')  
 IMAGE_URL = os.getenv('IMAGE_URL', default='http://localhost:5000/')          
 
-POPULATE = "?populate[{key}][populate]=*"
 
 def query_maker(keys: list) -> str:
-    POPULATE = "populate[{key}][populate]=*"
+    
+    def get_populate(name: str) -> str:
+        if name == "table":
+            return "populate[table][populate][about][populate][template][populate]=*"
+        return f"populate[{name}][populate]=*"
+
     output = ""
     for i, k in enumerate(keys):
         if i==0:
-           output= "?" + POPULATE.format(key=k)
+           output= "?" + get_populate(k)
         else:
-            output = output + "&" + POPULATE.format(key=k)
+            output = output + "&" + get_populate(k)
 
     return output
+
 
 # get data from the form admin panel 
 def get_data(path, keys: list=[]): 
