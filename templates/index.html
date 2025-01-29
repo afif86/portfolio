@@ -63,7 +63,7 @@ Home
 
         <div class="col-md-2 timeline-btn">
           <a class="btn btn-resume" href="/static/files/CV-Afif.pdf" target='_blank'>{{home.experience_button1}}</a>
-          <a class="btn btn-contact" href="">{{home.experience_button2}}</a>
+          <a class="btn btn-contact" href="{{ url_for('contact') }}">{{home.experience_button2}}</a>
         </div>
       </div>
     </section>
@@ -91,6 +91,13 @@ Home
         </div>
         <div class="col-md-6">
           <img src="/static/img/skills.png" alt="skills" />
+        </div>
+        <div class="col-md-12">
+          <h4>Technologies:</h4>
+          <p>JS, Python, Flask, Html, CSS3,Saas,React, Tailwind,  Bootstrap, jQuery, UI/UX, SQL, wordpress, SDLC.<br/>
+            A solid grasp of web development technologies, frameworks, and content management systems</p>
+          <p>Figma, photoshop </p>
+
         </div>
       </div>
     </section>
@@ -127,7 +134,7 @@ Home
           <div class="col-md-5 pm-title">
             <h2 class="title-portfolio">{{home.portfolio_title}}</h2>
             <p >{{home.portfolio_desc}}</p>
-            <a class="portfolio-btn" href="#">{{home.portfolio_button}}</a>
+            <a class="portfolio-btn" href='{{ url_for("portfolio") }}'>{{home.portfolio_button}}</a>
           </div>
       
       </div>
