@@ -947,6 +947,7 @@ section {
   color: #f6d7ff;
   font-size: 30px;
   margin-right: 20px;
+  margin-top: 10px !important;
 }
 
 .contact img {
