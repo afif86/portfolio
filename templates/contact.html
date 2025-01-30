@@ -6,32 +6,32 @@ contact
 
 <section class="container contact">
     <div class="row">
-    <div class="col-md-12">
-    <h2 class="contact-title">{{contact.contact_title}} </h2>
-    </div>
-    <div class="col-md-7">
-    <img src="{{contact.contact_image.data.attributes.url}}" alt="about" />
-    </div>
-    <div class="col-md-5 contact-info">
-    <div>
-    <h4>TELL:</h4>
-    <a href="callto:(+359) 876741390">{{contact.contact_phone}}</a>
-    </div>
-    <div>
-    <h4>EMAIL:</h4>
-    <a href="mailto:afif@hoseini.website">{{contact.email}}</a>
-    </div>
-    <div class="social-media">
-    <h4>SOCIAL MEDIA:</h4>
-    {%for item in social%}
-    <a href="#">
-        <i class="fa-brands {{ item|safe }}"></i>
-    </a>
-    {% endfor %}
+        <div class="col-md-12">
+            <h2 class="contact-title">{{contact.contact_title}} </h2>
+        </div>
+        <div class="col-md-7">
+            <img src="{{contact.contact_image.data.attributes.url}}" alt="about" />
+        </div>
+        <div class="col-md-5 contact-info">
+            <div>
+                <h4>TELL:</h4>
+                <a href="callto:(+359) 876741390">{{contact.contact_phone}}</a>
+            </div>
+            <div>
+                <h4>EMAIL:</h4>
+                <a href="mailto:afif@hoseini.website">{{contact.email}}</a>
+            </div>
+            <div class="social-media">
+                <h4>SOCIAL MEDIA:</h4>
+                {%for item in social%}
+                <a href="#">
+                    <i class="fa-brands {{ item.icon_class }} contact"></i>
+                </a>
+                {% endfor %}
 
 
-    </div>
-    </div>
+            </div>
+        </div>
 </section>
 
-  {% endblock body%}
+{% endblock body%}
