@@ -147,7 +147,11 @@ Home
             <div class="card-article">
               <div class="article-img">
                 <a href="{{item.attributes.url}}" target='_blank'>
-                  <img src="{{item.attributes.image.data.attributes.url}}" alt="article" />
+                   {% if item.attributes.image and item.attributes.image.data and item.attributes.image.data.attributes %}
+                    <img src="{{item.attributes.image.data.attributes.url}}" alt="article" />
+                  {% else %}
+                    <img src="/static/img/default.png" alt="No image available" />
+                  {% endif %}
                 </a>
               </div>
             </div>
